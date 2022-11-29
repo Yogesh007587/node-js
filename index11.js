@@ -1,0 +1,17 @@
+const fs = require('fs');
+const path = require('path');
+const dirPath= path.join(__dirname,'crud');
+const filePath = `${dirPath}/apple.txt`;
+
+
+// fs.writeFileSync(filePath,'this is the tale of naruto uzumaki');  --Creating the file
+// fs.readFile(filePath,'utf8',(err,item)=>{                         --Reading the file
+//     console.log(item)
+// })
+//  fs.appendFile(filePath,' and file name is apple.txt',(err)=>{    --Updating the file
+//     if(!err) console.log("file is updated.")
+//  })
+// fs.rename(filePath,`${dirPath}/fruit.txt`,(err)=>{                --Renamimg the file
+//     if(!err) console.log("file name is updated")
+// })
+fs.unlinkSync(`${dirPath}/fruit.txt`)                              //--Deleting the file
