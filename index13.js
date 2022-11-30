@@ -2,7 +2,8 @@ const { application } = require('express');
 const express =require('express');
 const app =express();
 app.get('',(req,res)=>{
-    res.send('Hello Kakarot, Welcome to home');
+    console.log("data sent by browser",req.query.name)   //get data or routing with express
+    res.send('Hello Kakarot, Welcome to home '+req.query.name);
 });
 
 app.get('/about',(req,res)=>{
